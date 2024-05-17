@@ -1,0 +1,30 @@
+[project]
+name = "body-movement"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "FloatingInt", email = "knutolaihelgesen@gmail.com" }
+]
+dependencies = [
+    "mediapipe>=0.10.14",
+    "opencv-python>=4.9.0.80",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[project.scripts]
+"body-movement" = "body_movement:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/body_movement"]
