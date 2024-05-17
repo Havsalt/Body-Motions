@@ -28,6 +28,8 @@ jaxlib==0.4.28
     # via mediapipe
 kiwisolver==1.4.5
     # via matplotlib
+linflex @ file:///C:/Users/knuto/Documents/VisualStudioCode/Python/Libraries/linflex
+    # via body-movement
 matplotlib==3.9.0
     # via mediapipe
 mediapipe==0.10.14
@@ -71,3 +73,5 @@ six==1.16.0
     # via python-dateutil
 sounddevice==0.4.6
     # via mediapipe
+websockets==12.0
+    # via body-movement
