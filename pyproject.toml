@@ -8,12 +8,14 @@ authors = [
 dependencies = [
     "mediapipe>=0.10.14",
     "opencv-python>=4.9.0.80",
+    "linflex @ file:///C:/Users/knuto/Documents/VisualStudioCode/Python/Libraries/linflex",
+    "websockets>=12.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.10"
 
 [project.scripts]
-"body-movement" = "body_movement:main"
+"main" = "main:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -27,4 +29,9 @@ dev-dependencies = []
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/body_movement"]
+include = [
+    "main.py",
+    "annotations.py",
+    "networking.py",
+    "detection.py"
+]
